@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="no-js">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CodeBloom — Curso de Programação Gamificado para jovens a partir de 12 anos</title>
+  <meta name="description" content="CodeBloom: curso de programação gamificado do zero ao profissional, baseado na Taxonomia de Bloom. TypeScript e JavaScript, a partir de 12 anos.">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header id="hero" class="section section-light">
+    <nav class="nav">
+      <span class="logo">🌱 CodeBloom</span>
+      <a class="nav-cta" href="#precos">Ver planos</a>
+    </nav>
+    <div class="hero-content">
+      <h1>Seu filho aprende a programar do zero ao profissional — jogando.</h1>
+      <p>CodeBloom é o curso de programação gamificado com metodologia real: a Taxonomia de Bloom. A partir de 12 anos, em TypeScript e JavaScript, sem experiência prévia.</p>
+      <a class="checkout-btn btn-primary" href="#precos">Quero inscrever meu filho</a>
+    </div>
+    <div class="hero-teaser reveal" aria-hidden="true">
+      <!-- teaser gamificado: 6 mini-badges emoji com os ranks -->
+      <span>🌱 Iniciante</span><span>🌿 Explorador</span><span>⚔️ Aventureiro</span>
+      <span>🔍 Estrategista</span><span>🛡️ Guardião</span><span>👑 Mestre</span>
+    </div>
+  </header>
+
+  <section id="depoimentos" class="section section-light">
+    <h2>Famílias que já começaram a jornada</h2>
+    <div class="cards-3">
+      <!-- 3 depoimentos placeholder; substituir por reais depois -->
+      <figure class="testimonial reveal"><blockquote>"Meu filho de 13 anos pediu para continuar depois da primeira quest."</blockquote><figcaption>— Pai de aluno (placeholder)</figcaption></figure>
+      <figure class="testimonial reveal"><blockquote>"Do zero para escrever código de verdade em semanas. A metodologia fez sentido."</blockquote><figcaption>— Mãe de aluna (placeholder)</figcaption></figure>
+      <figure class="testimonial reveal"><blockquote>"A trilha de evolução motiva. É o único 'jogo' que eu aprovo."</blockquote><figcaption>— Responsável (placeholder)</figcaption></figure>
+    </div>
+  </section>
+
+  <section id="trilha" class="section section-dark">
+    <h2>A Trilha CodeBloom — 6 quests, 6 níveis de aprendizado</h2>
+    <p class="section-sub">Cada quest segue um nível da Taxonomia de Bloom: metodologia reconhecida, progressão de verdade.</p>
+    <div class="bloom-ladder">
+      <!-- 6 .bloom-level, um por nível; nth-child posiciona degraus -->
+      <article class="bloom-level reveal">
+        <span class="bloom-rank">🌱 Iniciante</span>
+        <h3>1. Lembrar</h3>
+        <p>Lógica, algoritmos e pseudocódigo — a base de tudo.</p>
+        <div class="xp-bar" data-xp="20"></div>
+      </article>
+      <article class="bloom-level reveal">
+        <span class="bloom-rank">🌿 Explorador</span><h3>2. Entender</h3>
+        <p>O primeiro código real: HTML e JavaScript.</p>
+        <div class="xp-bar" data-xp="35"></div>
+      </article>
+      <article class="bloom-level reveal">
+        <span class="bloom-rank">⚔️ Aventureiro</span><h3>3. Aplicar</h3>
+        <p>Projetos práticos e primeiros frameworks.</p>
+        <div class="xp-bar" data-xp="50"></div>
+      </article>
+      <article class="bloom-level reveal">
+        <span class="bloom-rank">🔍 Estrategista</span><h3>4. Analisar</h3>
+        <p>Análise de requisitos e versionamento com Git.</p>
+        <div class="xp-bar" data-xp="65"></div>
+      </article>
+      <article class="bloom-level reveal">
+        <span class="bloom-rank">🛡️ Guardião</span><h3>5. Avaliar</h3>
+        <p>Arquitetura, revisão de código e boas práticas.</p>
+        <div class="xp-bar" data-xp="80"></div>
+      </article>
+      <article class="bloom-level reveal">
+        <span class="bloom-rank">👑 Mestre</span><h3>6. Criar</h3>
+        <p>Projeto final e deploy de um portfólio profissional.</p>
+        <div class="xp-bar" data-xp="100"></div>
+      </article>
+    </div>
+  </section>
+
+  <section id="precos" class="section section-light">
+    <h2>Escolha o plano da jornada</h2>
+    <div class="cards-2">
+      <article class="plan-card reveal">
+        <h3>Mensal</h3>
+        <p class="price">R$ 97<span>/mês</span></p>
+        <ul>
+          <li>Acesso completo à trilha</li>
+          <li>Cancele quando quiser</li>
+        </ul>
+        <a class="checkout-btn" href="#checkout-mensal" target="_blank" rel="noopener">Assinar mensal</a>
+      </article>
+      <article class="plan-card plan-featured reveal">
+        <h3>Vitalício</h3>
+        <p class="price">R$ 997<span>pagamento único</span></p>
+        <ul>
+          <li>Acesso para sempre</li>
+          <li>Todas as atualizações futuras</li>
+        </ul>
+        <a class="checkout-btn btn-primary" href="#checkout-vitalicio" target="_blank" rel="noopener">Garantir vitalício</a>
+      </article>
+    </div>
+    <p class="trust">🔒 Pagamento seguro via Stripe · Garantias e reembolsos conforme o Código de Defesa do Consumidor (CDC), respeitando o tempo de serviço oferecido e utilizado.</p>
+  </section>
+
+  <section id="faq" class="section section-light">
+    <h2>Perguntas de pais e responsáveis</h2>
+    <!-- 5 details/summary, um por pergunta; + 1 "Em breve" -->
+    <details class="reveal"><summary>A partir de que idade?</summary><p>O CodeBloom foi desenhado para jovens a partir de 12 anos.</p></details>
+    <details class="reveal"><summary>Precisa de experiência prévia?</summary><p>Não. O curso começa do zero absoluto: lógica, algoritmos e pseudocódigo antes do primeiro código.</p></details>
+    <details class="reveal"><summary>Quais linguagens meu filho vai aprender?</summary><p>TypeScript e JavaScript — do zero ao profissional, incluindo projetos, frameworks e deploy.</p></details>
+    <details class="reveal"><summary>Eu consigo acompanhar a evolução?</summary><p>Sim. A trilha de quests e níveis de XP mostra exatamente em que nível da Taxonomia de Bloom seu filho está.</p></details>
+    <details class="reveal"><summary>E se não funcionar para a gente?</summary><p>Garantias e reembolsos seguem estritamente o Código de Defesa do Consumidor, respeitando o tempo de serviço oferecido e utilizado.</p></details>
+    <details class="reveal"><summary>Em breve: outros cursos</summary><p>Para quem já sabe programar mas quer expertise em uma linguagem específica, outros cursos estão a caminho.</p></details>
+  </section>
+
+  <section id="cta-final" class="section section-light">
+    <h2>Pronto para começar a jornada?</h2>
+    <div class="cards-2">
+      <a class="checkout-btn" href="#checkout-mensal" target="_blank" rel="noopener">Mensal — R$ 97/mês</a>
+      <a class="checkout-btn btn-primary" href="#checkout-vitalicio" target="_blank" rel="noopener">Vitalício — R$ 997</a>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <span class="logo">🌱 CodeBloom</span>
+    <a href="mailto:contato@codebloom.dev">contato@codebloom.dev</a>
+    <a href="#termos">Termos</a> · <a href="#privacidade">Privacidade</a>
+  </footer>
+
+  <script src="script.js" defer></script>
+</body>
+</html>
