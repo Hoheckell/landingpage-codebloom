@@ -307,7 +307,7 @@ git add -A && git commit -m "fix: ajustes do checklist manual da spec"
 **Files:**
 - Modify: nenhum arquivo local — é configuração do repo remoto.
 
-- [ ] **Step 1: Esperar o usuário indicar o repo remoto**
+- [x] **Step 1: Esperar o usuário indicar o repo remoto**
 
 O usuário já decidiu GitHub Pages (m0026). Quando o remote existir:
 
@@ -317,7 +317,7 @@ git push -u origin main
 ```
 - Settings → Pages → Source: `main` branch, `/ (root)`. Página em `https://<user>.github.io/<repo>/`.
 
-- [ ] **Step 2: Smoke-check da URL pública**
+- [x] **Step 2: Smoke-check da URL pública**
 
 Abrir a URL publicada, repetir item 2 do Task 4 (links/âncoras).
 
