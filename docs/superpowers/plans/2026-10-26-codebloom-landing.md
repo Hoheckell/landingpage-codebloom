@@ -33,7 +33,7 @@
 **Interfaces:**
 - Produces (usados pelas Tasks 2–3): IDs de seção `#hero`, `#depoimentos`, `#trilha`, `#precos`, `#faq`, `#cta-final`; classes `.reveal` (cards de scroll-reveal), `.bloom-level` (6 cards da escada), `.plan-card` (2 planos), `.checkout-btn` (botões Stripe).
 
-- [ ] **Step 1: Escrever o `index.html` completo**
+- [x] **Step 1: Escrever o `index.html` completo**
 
 Estrutura semântica, na ordem (todo o copy já definitivo — não inventar texto novo na hora):
 
@@ -171,14 +171,14 @@ Estrutura semântica, na ordem (todo o copy já definitivo — não inventar tex
 
 Nota: `#termos`/`#privacidade` são placeholders de âncora (como os de checkout) — páginas jurídicas ficam fora do escopo da spec.
 
-- [ ] **Step 2: Smoke-check no navegador**
+- [x] **Step 2: Smoke-check no navegador**
 
 ```bash
 python3 -m http.server 8000 --directory . &
 ```
 Abrir `http://localhost:8000` — conteúdo visível (sem CSS ainda, mas estrutura legível). Matar o servidor.
 
-- [ ] **Step 3: Commit**
+- [x] **Step 3: Commit**
 
 ```bash
 git add index.html
@@ -196,7 +196,7 @@ git commit -m "feat: index.html com estrutura e copy da landing CodeBloom"
 - Consumes: classes/IDs do Task 1 (`section-light`, `section-dark`, `.reveal`, `.bloom-level`, `.xp-bar`, `.plan-card`, `.checkout-btn`, `.bloom-ladder`, `.cards-3`, `.cards-2`, `.nav`, `.hero-*`, `.footer`, `details`).
 - Produces: estado inicial `.reveal` invisível + classe `.reveal.visible` aplicada pelo JS da Task 3; `.xp-bar::before` com largura via `data-xp` (`width: calc(var(--xp) * 1%)` com `--xp` setado por CSS `nth-child`).
 
-- [ ] **Step 1: Escrever o `style.css`**
+- [x] **Step 1: Escrever o `style.css`**
 
 Pontos-chave (valores concretos, não abstratos):
 
@@ -211,14 +211,14 @@ Pontos-chave (valores concretos, não abstratos):
 - Mobile-first: grid das seções com `grid-template-columns: 1fr` e `auto-fit`/`repeat(auto-fit, minmax(240px, 1fr))` para cards.
 - Scroll suave: `html { scroll-behavior: smooth }` (progressive enhancement; Task 3 é redundância de UX já coberta aqui — manter ambas é barato).
 
-- [ ] **Step 2: Verificação visual**
+- [x] **Step 2: Verificação visual**
 
 ```bash
 python3 -m http.server 8000 --directory . &
 ```
 No navegador: hero claro, trilha escura com 6 cards em escada, botões estilizados, XP bars. DevTools: 375px — escada empilhada. Matar o servidor.
 
-- [ ] **Step 3: Commit**
+- [x] **Step 3: Commit**
 
 ```bash
 git add style.css
@@ -236,7 +236,7 @@ git commit -m "style: tema claro/escuro, escada de Bloom, XP bars, responsivo, r
 - Consumes: `.reveal` (Task 2) — aplica `.visible` ao entrar no viewport.
 - Produces: nada consumido por outros arquivos.
 
-- [ ] **Step 1: Escrever o `script.js`**
+- [x] **Step 1: Escrever o `script.js`**
 
 ```js
 // Reveal on scroll (enhancement — sem JS, conteúdo visível via .no-js fallback no CSS)
@@ -257,7 +257,7 @@ document.querySelectorAll('.reveal').forEach((el) => io.observe(el));
 
 (CSS do Task 2 deve setar `html.no-js .reveal { opacity: 1; transform: none }` — o `<html>` ganha `class="no-js"` no Task 1? **Não** — ajuste no Task 3: `document.documentElement.classList.add('no-js')` deve rodar como primeira linha inline ANTES do CSS? Errado para estático. Correção aplicada ao plano: Task 1 inclui `<html lang="pt-BR" class="no-js">` e o CSS (Task 2) tem o fallback `html.no-js .reveal`. Este script remove `no-js` no load. Executor: garantir os três pontos consistentes.)
 
-- [ ] **Step 2: Verificar comportamento**
+- [x] **Step 2: Verificar comportamento**
 
 ```bash
 python3 -m http.server 8000 --directory . &
@@ -266,7 +266,7 @@ python3 -m http.server 8000 --directory . &
 - DevTools → "Disable JavaScript" + reload: todo conteúdo visível (fallback `no-js`).
 Matar o servidor.
 
-- [ ] **Step 3: Commit**
+- [x] **Step 3: Commit**
 
 ```bash
 git add script.js index.html
@@ -281,7 +281,7 @@ git commit -m "feat: reveal on scroll via IntersectionObserver com fallback no-j
 **Files:**
 - Modify: nenhum (verificação; correções inline se algo falhar)
 
-- [ ] **Step 1: Rodar o checklist completo da spec**
+- [x] **Step 1: Rodar o checklist completo da spec**
 
 ```bash
 python3 -m http.server 8000 --directory . &
@@ -293,7 +293,7 @@ Checklist (spec §6):
 4. Confirmar scroll-reveal em cascata na trilha.
 5. JS desligado: conteúdo 100% visível.
 
-- [ ] **Step 2: Corrigir o que falhar e commit (se houver correção)**
+- [x] **Step 2: Corrigir o que falhar e commit (se houver correção)**
 
 ```bash
 git add -A && git commit -m "fix: ajustes do checklist manual da spec"
